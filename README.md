@@ -3,7 +3,7 @@ managed with [`chezmoi`](https://www.chezmoi.io/)
 
 ## How to use
 ```
-chezmoi init Kolvin
+sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply Kolvin
 ```
 
 ## Secret managment
