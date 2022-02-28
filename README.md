@@ -24,4 +24,4 @@ eval $(op signin)
 - [x] [chezmoi](https://www.chezmoi.io/) setup
 - [x] .zsh
   - [x] theme: powerlevel10k
-- [ ] .ssh
+- [x] .ssh
