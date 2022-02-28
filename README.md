@@ -19,3 +19,9 @@ Then, to login afterwards, run:
 ```
 eval $(op signin)
 ```
+
+## TODO
+- [x] [chezmoi](https://www.chezmoi.io/) setup
+- [x] .zsh
+  - [x] theme: powerlevel10k
+- [ ] .ssh
