@@ -34,4 +34,4 @@
 [data]
     email      = {{ $email | quote }}
     name       = {{ $name | quote }}
-    signingkey = {{- $signingkey -}}
+    signingkey = {{- $signingkey | quote -}}
