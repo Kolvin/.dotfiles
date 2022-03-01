@@ -3,7 +3,7 @@ managed with [`chezmoi`](https://www.chezmoi.io/)
 
 ## How to use
 ```
-sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply https://github.com/Kolvin/.dotfiles --verbose
+sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply https://github.com/Kolvin/dotfiles --verbose
 ```
 
 ## Secret managment
