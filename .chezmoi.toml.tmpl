@@ -5,26 +5,27 @@
 # `~/.config/chezmoi/chezmoi.toml`
 # See https://www.chezmoi.io/user-guide/setup/#re-create-your-config-file
 
-{{- $email      := "" -}}
-{{- $name       := "" -}}
-{{- $signingkey := "" -}}
+# Git 
+{{- $gitEmail      := "" -}}
+{{- $gitName       := "" -}}
+{{- $gpgSigningKey := "" -}}
 
-{{- if (hasKey . "email") -}}
-{{-   $email = .email -}}
+{{- if (hasKey . "gitEmail") -}}
+{{-   $gitEmail = .gitEmail -}}
 {{- else -}}
-{{-   $email = promptString "email" -}}
+{{-   $gitEmail = promptString "Git commit email" -}}
 {{- end -}}
 
-{{- if (hasKey . "name") -}}
-{{-   $name = .name -}}
+{{- if (hasKey . "gitName") -}}
+{{-   $gitName = .gitName -}}
 {{- else -}}
-{{-   $name = promptString "name" -}}
+{{-   $gitName = promptString "Git commit name:" -}}
 {{- end -}}
 
-{{- if (hasKey . "signingkey") -}}
-{{-   $signingkey = .signingkey -}}
+{{- if (hasKey . "gpgSigningKey") -}}
+{{-   $gpgSigningKey = .gpgSigningKey -}}
 {{- else  -}}
-{{-   $signingkey = promptString "GPG signing key" -}}
+{{-   $gpgSigningKey = promptString "GPG signing key" -}}
 {{- end }}
 
 [git]
@@ -32,6 +33,6 @@
     autoPush = false
 
 [data]
-    email      = {{ $email | quote }}
-    name       = {{ $name | quote }}
-    signingkey = {{- $signingkey | quote -}}
+    git.email      = {{ $gitEmail | quote }}
+    git.name       = {{ $gitName | quote }}
+    gpg.signingkey = {{- $gpgSigningKey | quote -}}
