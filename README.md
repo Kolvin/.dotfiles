@@ -1,11 +1,22 @@
-# Kolvins .dotfiles
-managed with [`chezmoi`](https://www.chezmoi.io/)
+# Kolvins dotfiles
+Powered by [`Chezmoi 🏠`](https://www.chezmoi.io/)
 
-## How to use
+## Install
+> this repo reads from my 1password acconut so it wont work for you!
 ```
 sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply https://github.com/Kolvin/dotfiles --verbose
 ```
+___
+## TODO
+- [x] [chezmoi](https://www.chezmoi.io/) setup
+- [x] .zsh
+  - [x] theme: powerlevel10k
+- [x] .ssh
+- [ ] cross platform
+  - [x] macOS
+  - [ ] linux 
 
+___
 ## Secret managment
 Personal & Work secrets are stored in [1Password](https://1password.com/), and you'll need
 the [1Password
@@ -19,9 +30,3 @@ Then, to login afterwards, run:
 ```
 eval $(op signin)
 ```
-
-## TODO
-- [x] [chezmoi](https://www.chezmoi.io/) setup
-- [x] .zsh
-  - [x] theme: powerlevel10k
-- [x] .ssh
