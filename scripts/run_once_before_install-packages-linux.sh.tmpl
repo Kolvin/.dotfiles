@@ -1,0 +1,13 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/bash
+
+# Install NVM (node)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+GREEN='\033[0;32m'
+printf "${GREEN}Package install complete\n"
+
+{{ end -}}

@@ -1,0 +1,41 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+# Install NVM (node)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+# Let it brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+brew tap homebrew/cask
+brew tap homebrew/cask-versions
+
+brew bundle --no-lock --file=/dev/stdin <<EOF
+brew "git"
+brew "zsh"
+brew "1password"
+brew "awscli"
+brew "helm"
+brew "terraform-docs"
+brew "tfenv"
+brew "insomnia"
+brew "jq"
+
+cask "aws-vault"
+cask "docker"
+cask "iterm2"
+cask "slack"
+cask "visual-studio-code"
+cask "firefox-developer-edition"
+EOF
+
+
+# Install NVM (node)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+GREEN='\033[0;32m'
+printf "${GREEN}Package install complete\n"
+
+{{ end -}}
