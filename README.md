@@ -21,7 +21,8 @@ ___
 # TODO
 - [x] [chezmoi](https://www.chezmoi.io/) setup
 - [x] .zsh
-  - [x] theme: powerlevel10k
+  - [x] ~~theme: [powerlevel10k](https://github.com/romkatv/powerlevel10k)~~
+  - [x] theme: [starship](https://starship.rs/)q
 - [x] .ssh
 - [ ] cross platform
   - [x] macOS
