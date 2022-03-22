@@ -1,20 +1,39 @@
-add_newline = false
+add_newline = true
 scan_timeout = 0
 
-[line_break]
-disabled = false
+[aws]
+format = 'on [$symbol ( $profile )(\($region\) )]($style)'
+style = "bold blue"
+symbol = "☁️ "
 
 [battery]
-full_symbol = "🔋"
-charging_symbol = "⚡️"
-discharging_symbol = "⚠️"
+charging_symbol    = "⚡️ "
+discharging_symbol = "☠️  "
+full_symbol        = "🔋 "
+unknown_symbol     = "🤨 "
 
 [[battery.display]]
-threshold = 10
-style = "bold red"
+threshold = 15
+style     = "bold red"
+
+[[battery.display]]
+threshold = 30
+style     = "bold yellow"
+
+[character]
+success_symbol = "[➜](bold green) "
+error_symbol = "[✗](bold red) "
+
+[cmd_duration]
+min_time = 500
+format = "time [$duration](bold yellow)"
+
+[container]
+format = "[$symbol \\[$name\\]]($style) "
+disabled = true
 
 [directory]
-truncation_symbol = "⬅️ .."
+truncation_symbol = "◀︎ .."
 truncation_length = 2
 truncate_to_repo = true
 format = "[$path]($style)( [$read_only]($read_only_style)) "
@@ -26,46 +45,15 @@ symbol = "🐳 "
 [git_status]
 format = '([$all_status$ahead_behind]($style)) '
 conflicted = "❌"
-# ahead = "☘️"
-# behind = "☣️"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-# untracked = "🤷‍"
 stashed = "🚫"
-# modified = "📝"
 renamed = "☑️"
 deleted = "⛔"
 ahead = "⇡${count}"
 behind = "⇣${count}"
 
-[hostname]
-ssh_only = true
-format = "[$hostname]($style) in "
-trim_at = ".companyname.com"
-disabled = false
-
-[aws]
-format = 'on [$symbol($profile )(\($region\) )]($style)'
-style = "bold blue"
-symbol = "🅰 "
-
-[kubernetes]
-symbol = "☸️ "
-format = '[$symbol$context\($namespace\)]($style) '
-style = "#c5f542"
-disabled = false
-
-[python]
-symbol = " "
-pyenv_version_name = true
-pyenv_prefix = "python "
-format = '[${symbol}(${version} )(\($virtualenv\))]($style)'
-# format = '[${pyenv_prefix}${symbol} (${version} )(\($virtualenv\))]($style)'
-
-[terraform]
-symbol = "🔧 "
-
 [git_branch]
-symbol = " "
+symbol = "🍃 "
 format= "[$symbol$branch]($style) "
 
 [git_commit]
@@ -73,21 +61,35 @@ commit_hash_length = 4
 style = "bold green"
 tag_symbol = "🏷 "
 
+[kubernetes]
+symbol = "☸️  "
+format = '[$symbol$context\($namespace\)]($style)'
+style = "#c5f542"
+disabled = false
+
+[helm]
+disabled = false
+format = "via[ ⎈$version ](bold white)"
+
+[python]
+symbol = " "
+pyenv_version_name = true
+pyenv_prefix = "python "
+format = '[${symbol}(${version} )(\($virtualenv\))]($style)'
+
 [nodejs]
 symbol = " "
 format = "[$symbol$version]($style) "
 style = "#abdbe3"
 detect_files = ["package.json", ".node-version", ".nvrc"]
 
-[cmd_duration]
-min_time = 500
-format = "time [$duration](bold yellow)"
-
-# disabled
-[env_var]
-variable = "ENVIRONMENT"
-style = "dimmed bold purple"
+[localip]
+ssh_only = false
+format = "@[$localipv4](bold red) "
 disabled = true
+
+[php]
+format = "via [🔹 $version](147 bold) "
 
 [username]
 disabled = true
