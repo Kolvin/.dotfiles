@@ -10,6 +10,11 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # Install Starship
 curl -sS https://starship.rs/install.sh | sh
 
+# Install Helix editor
+git clone https://github.com/helix-editor/helix
+cd helix
+cargo install --path helix-term
+
 GREEN='\033[0;32m'
 printf "${GREEN}Package install complete\n"
 
