@@ -8,6 +8,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew tap homebrew/cask
 brew tap homebrew/cask-versions
+brew tap helix-editor/helix
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
 brew "git"
@@ -19,6 +20,7 @@ brew "terraform-docs"
 brew "tfenv"
 brew "insomnia"
 brew "jq"
+brew "helix"
 
 cask "1password"
 cask "aws-vault"
