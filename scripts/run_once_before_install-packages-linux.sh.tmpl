@@ -15,6 +15,9 @@ git clone https://github.com/helix-editor/helix
 cd helix
 cargo install --path helix-term
 
+# Install TGswitch from CI_PIPELINE_SOURCE
+curl -L https://raw.githubusercontent.com/warrensbox/tgswitch/release/install.sh | bash
+
 GREEN='\033[0;32m'
 printf "${GREEN}Package install complete\n"
 
