@@ -1,0 +1,6 @@
+{
+    "workbench.colorTheme": "Synthwave x Fluoromachine",
+    "eslint.alwaysShowStatus": true,
+    "files.autoSave": "onFocusChange",
+    "editor.cursorStyle": "underline-thin"
+}
