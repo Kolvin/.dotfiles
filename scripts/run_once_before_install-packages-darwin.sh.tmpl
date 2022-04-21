@@ -1,9 +1,6 @@
 {{- if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 
-# Install NVM (node)
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-
 # Let it brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew tap homebrew/cask
