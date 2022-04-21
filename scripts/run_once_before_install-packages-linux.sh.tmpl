@@ -1,6 +1,9 @@
 {{ if eq .chezmoi.os "linux" -}}
 #!/bin/bash
 
+# Install chezmoi
+sh -c "$(curl -fsLS chezmoi.io/get)"
+
 # Install NVM (node)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
