@@ -1,6 +1,12 @@
 {{ if eq .chezmoi.os "linux" -}}
 #!/bin/bash
 
+# Update
+sudo apt-get update
+
+# Instal system deps
+sudo apt install build-essential -y
+
 # Install chezmoi
 sh -c "$(curl -fsLS chezmoi.io/get)"
 
@@ -10,20 +16,46 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# Install Starship
-curl -sS https://starship.rs/install.sh | sh
+# Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Install Helix editor
-git clone https://github.com/helix-editor/helix
-cd helix
-cargo install --path helix-term
+git clone https://github.com/helix-editor/helix && \
+    cd helix && \ 
+    cargo install --path helix-term &&
+    cd .. && rm -rf helix
+
+# Install Starship
+cargo install starship --locked
 
 # Install TGswitch
 wget https://raw.githubusercontent.com/warrensbox/tgswitch/release/install.sh && \
     chmod 755 install.sh && \
-    ./install.sh -b $HOME/.bin
+    ./install.sh -b $HOME/bin && \
+    rm install.sh
+
+# Terraform Docs
+curl -sSLo ./terraform-docs.tar.gz https://terraform-docs.io/dl/v0.16.0/terraform-docs-v0.16.0-$(uname)-amd64.tar.gz && \
+    tar -xzf terraform-docs.tar.gz && \
+    chmod +x terraform-docs && \
+    mv terraform-docs $HOME/bin/
+
+# Helm
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 && \
+    chmod +x get_helm.sh && \
+    ./get_helm.sh && \
+    rm get_helm.sh
+
+# aws-vault
+curl -L -o $HOME/bin/aws-vault https://github.com/99designs/aws-vault/releases/download/v6.6.0/aws-vault-linux-amd64 && \
+    chmod +x aws-vault
 
 GREEN='\033[0;32m'
 printf "${GREEN}Package install complete\n"
+
+pwd
+cd ..
+rm -rf scripts
+printf "${GREEN}Cleaned up\n"
 
 {{ end -}}
