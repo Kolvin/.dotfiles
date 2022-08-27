@@ -1,7 +1,7 @@
-{{ if (ne .gpg.signingkey "") }}
+{{- if (ne .gpg.signingkey "") -}}
 [commit]
     gpgsign = true
-{{ end }}
+{{- end }}
 
 [core]
   abbrev = 12
