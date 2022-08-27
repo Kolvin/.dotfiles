@@ -66,22 +66,24 @@
   email          = "{{- .git.email -}}"
   name           = "{{- .git.name -}}"
 {{- if (ne .gpg.signingkey "") }}
-  signingkey = "{{- .gpg.signingkey -}}"
+  signingkey     = "{{- .gpg.signingkey -}}"
 {{- end  }}
   useConfigOnly  = true
 
 # Split Protocol Config
 ## GitHub
-[url "git@github.com:"]
-	pushInsteadOf = https://github.com/
 [url "https://github.com/"]
-  insteadOf = git@github.com:
+  insteadOf = "git@github.com:"
+[url "git@github.com:"]
+  pushInsteadOf = "https://github.com/"
+  pushInsteadOf = "git@github.com:"
 
 ## GitLab
-[url "git@gitlab.com:"]
-  pushInsteadOf = https://gitlab.com
 [url "https://gitlab.com/"]
-  insteadOf = git@gitlab.com:
+  insteadOf = "git@gitlab.com:"
+[url "git@gitlab.com:"]
+  pushInsteadOf = "https://gitlab.com/"
+  pushInsteadOf = "git@gitlab.com:"
 
 [branch "master"]
   remote = origin
