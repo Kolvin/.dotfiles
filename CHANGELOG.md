@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/kolvin/dotfiles/compare/v1.0.1...v1.0.2) (2022-08-27)
+
+
+### Bug Fixes
+
+* typo ([6a5a562](https://github.com/kolvin/dotfiles/commit/6a5a56237951d5e570ca77c46b33d6f072e28eab))
+
 ## [1.0.1](https://github.com/kolvin/dotfiles/compare/v1.0.0...v1.0.1) (2022-08-27)
 
 
