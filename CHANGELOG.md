@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/kolvin/dotfiles/compare/v1.0.0...v1.0.1) (2022-08-27)
+
+
+### Bug Fixes
+
+* **git:** config templating fix ([31d53fa](https://github.com/kolvin/dotfiles/commit/31d53faa34ff0293a78aeedb42730a8a1146295c))
+
 # 1.0.0 (2022-08-27)
 
 
