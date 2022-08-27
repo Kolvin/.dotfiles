@@ -1,1 +1,24 @@
-{{- onepasswordDocument "6oxrh2t4tjma6o3rlfb7nzezk4" -}}
+## Home cluster
+Host pi-zero
+    HostName 10.19.1.90
+    User pi
+    Port 22
+
+Host kube-master
+    HostName 10.19.1.147
+    User pi
+    Port 22
+
+# Personal GitHub
+Host personalgit
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_personal.pub
+    IdentitiesOnly yes
+
+# Personal Gitlab
+Host workgit
+    HostName gitlab.com
+    User git
+    IdentityFile ~/.ssh/id_work.pub
+    IdentitiesOnly yes
