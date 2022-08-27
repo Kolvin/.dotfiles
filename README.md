@@ -12,9 +12,14 @@ ___
 
 # dotfiles
 
-> this repo is dependant on my own password vault, get yer ain
+A repo for my local machine config, Powered by [`Chezmoi 🏠`](https://www.chezmoi.io/)
 
-Powered by [`Chezmoi 🏠`](https://www.chezmoi.io/)
+Currently running zsh+oh-my-zsh, starship, pre-commit and more
+
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org) 
+[![Semantic Release - angular](https://img.shields.io/static/v1?label=Semantic+Release&message=angular&color=e10079&logo=semantic-release)](https://github.com/semantic-release/semantic-release) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+> this repo is dependant on my own password vault, get yer ain
 ___
 
 # Prerequisites
