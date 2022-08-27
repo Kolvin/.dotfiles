@@ -1,6 +1,10 @@
 {
-    "workbench.colorTheme": "Synthwave x Fluoromachine",
     "eslint.alwaysShowStatus": true,
     "files.autoSave": "onFocusChange",
-    "editor.cursorStyle": "underline-thin"
+    "editor.cursorStyle": "underline-thin",
+    "editor.tabSize": 2,
+    "explorer.compactFolders": false,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "workbench.colorTheme": "Synthwave x Fluoromachine",
+    "synthwave84.brightness": 1
 }
