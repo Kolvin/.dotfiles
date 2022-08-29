@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/kolvin/dotfiles/compare/v1.0.2...v1.0.3) (2022-08-29)
+
+
+### Bug Fixes
+
+* **git:** set git identify agent and remove document imports ([c64b34b](https://github.com/kolvin/dotfiles/commit/c64b34bd3f5788189d488cb12eebaf49f071f358))
+
 ## [1.0.2](https://github.com/kolvin/dotfiles/compare/v1.0.1...v1.0.2) (2022-08-27)
 
 
