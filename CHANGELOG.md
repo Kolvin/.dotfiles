@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/kolvin/dotfiles/compare/v1.0.3...v1.0.4) (2022-09-07)
+
+
+### Bug Fixes
+
+* **git:** removed split protcol for gitlab hostname, was casing issues ([db16541](https://github.com/kolvin/dotfiles/commit/db16541caa974a4493a38fe6d12043c72a8c2999))
+
 ## [1.0.3](https://github.com/kolvin/dotfiles/compare/v1.0.2...v1.0.3) (2022-08-29)
 
 
