@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/kolvin/dotfiles/compare/v1.0.4...v1.1.0) (2022-09-16)
+
+
+### Features
+
+* **networking:** install ngrok ([9606ac7](https://github.com/kolvin/dotfiles/commit/9606ac7391c609a09d95e50dc0526c8d05ae84d0))
+
 ## [1.0.4](https://github.com/kolvin/dotfiles/compare/v1.0.3...v1.0.4) (2022-09-07)
 
 
