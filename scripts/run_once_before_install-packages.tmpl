@@ -40,10 +40,14 @@ curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --d
 
 sudo apt install 1password
 
+# npiperelay, WSL support for vault ssh keys
+GOOS=windows go install github.com/jstarks/npiperelay@latest
+sudo ln -s ~/go/bin/npiperelay.exe /usr/local/bin/npiperelay.exe
+
 {{   end }}
 {{ end }}
 
-
+# Linux
 {{ if eq .chezmoi.os "linux" -}}
 {{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
 brew bundle --no-lock --file=/dev/stdin <<EOF
@@ -53,6 +57,7 @@ brew bundle --no-lock --file=/dev/stdin <<EOF
     brew "gcc"
     brew "awscli"
     brew "helm"
+    brew "golang"
     brew "terraform-docs"
     brew "warrensbox/tap/tgswitch"
     brew "tfenv"
@@ -64,6 +69,7 @@ brew bundle --no-lock --file=/dev/stdin <<EOF
     brew "aws-vault"
 EOF
 {{   end }}
+# MacOS
 {{ else if eq .chezmoi.os "darwin" -}}
     brew bundle --no-lock --file=/dev/stdin <<EOF
     brew "git"
