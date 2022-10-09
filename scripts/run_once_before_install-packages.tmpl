@@ -1,0 +1,110 @@
+#!/bin/bash
+
+GREEN='\033[0;32m'
+
+{{ if eq .chezmoi.os "linux" -}}
+
+# Update
+sudo apt-get update
+
+# Instal system deps
+sudo apt install build-essential curl file -y
+
+{{ end -}}
+
+# Let it brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+brew tap homebrew/cask
+brew tap homebrew/cask-versions
+brew tap helix-editor/helix
+brew tap warrensbox/tap
+
+
+# WSL specific installations
+{{ if eq .chezmoi.os "linux" }}
+{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+
+# Ngrok
+wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+unzip ngrok-stable-linux-amd64.zip -d /usr/local/bin
+
+
+# 1password
+curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg
+echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/1password-archive-keyring.gpg] https://downloads.1password.com/linux/debian/amd64 stable main' | sudo tee /etc/apt/sources.list.d/1password.list
+sudo mkdir -p /etc/debsig/policies/AC2D62742012EA22/
+curl -sS https://downloads.1password.com/linux/debian/debsig/1password.pol | sudo tee /etc/debsig/policies/AC2D62742012EA22/1password.pol
+sudo mkdir -p /usr/share/debsig/keyrings/AC2D62742012EA22
+curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/debsig/keyrings/AC2D62742012EA22/debsig.gpg
+
+sudo apt install 1password
+
+# npiperelay, WSL support for vault ssh keys
+GOOS=windows go install github.com/jstarks/npiperelay@latest
+sudo ln -s ~/go/bin/npiperelay.exe /usr/local/bin/npiperelay.exe
+
+{{   end }}
+{{ end }}
+
+# Linux
+{{ if eq .chezmoi.os "linux" -}}
+{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+brew bundle --no-lock --file=/dev/stdin <<EOF
+    brew "git"
+    brew "zsh"
+    brew "starship"
+    brew "gcc"
+    brew "awscli"
+    brew "helm"
+    brew "golang"
+    brew "terraform-docs"
+    brew "warrensbox/tap/tgswitch"
+    brew "tfenv"
+    brew "socat"
+    brew "jq"
+    brew "postgresql@14"
+    brew "pnpm"
+    brew "thefuck"
+    brew "aws-vault"
+EOF
+{{   end }}
+# MacOS
+{{ else if eq .chezmoi.os "darwin" -}}
+    brew bundle --no-lock --file=/dev/stdin <<EOF
+    brew "git"
+    brew "zsh"
+    brew "starship"
+    brew "gcc"
+    brew "awscli"
+    brew "helm"
+    brew "terraform-docs"
+    brew "warrensbox/tap/tgswitch"
+    brew "tfenv"
+    brew "insomnia"
+    brew "socat"
+    brew "jq"
+    brew "postgresql"
+    brew "pnpm"
+    brew "thefuck"
+
+    brew "ngrok"
+
+    cask "1password"
+    cask "aws-vault"
+    cask "docker"
+    cask "iterm2"
+    cask "slack"
+    cask "visual-studio-code"
+    cask "firefox-developer-edition"
+EOF
+{{ end -}}
+
+
+# Install NVM (node)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+printf "${GREEN}Package install complete\n"
