@@ -10,7 +10,7 @@ export PATH=$PATH:$HOME/bin
 
 # GO
 export GOPATH=$HOME/go
-export GOROOT="$(brew --prefix golang)/libexec"
+export GOROOT="$(brew --prefix go@1.18)/libexec"
 export GOBIN="$PATH/bin"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
@@ -32,9 +32,6 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/kolvin/.zprofile
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # User configuration
 # Preferred editor for local and remote sessions
@@ -71,4 +68,3 @@ fi
 
 {{   end }}
 {{ end }}
-
