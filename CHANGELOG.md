@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/kolvin/dotfiles/compare/v1.1.0...v1.1.1) (2022-10-11)
+
+
+### Bug Fixes
+
+* **zsh:** remove redundant homebrew evaluations ([7d0933f](https://github.com/kolvin/dotfiles/commit/7d0933fdcb09371165d82b8236753796455df818))
+
 # [1.1.0](https://github.com/kolvin/dotfiles/compare/v1.0.4...v1.1.0) (2022-09-16)
 
 
