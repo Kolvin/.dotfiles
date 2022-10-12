@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/kolvin/dotfiles/compare/v1.1.1...v1.2.0) (2022-10-12)
+
+
+### Features
+
+* add packer to setup ([52598d2](https://github.com/kolvin/dotfiles/commit/52598d25433a6d5a0f4355f520f8330da6df6399))
+
 ## [1.1.1](https://github.com/kolvin/dotfiles/compare/v1.1.0...v1.1.1) (2022-10-11)
 
 
