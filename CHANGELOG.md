@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/kolvin/dotfiles/compare/v1.2.0...v1.2.1) (2022-10-21)
+
+
+### Bug Fixes
+
+* **golang:** cleanup go install on macosx ([b03bd00](https://github.com/kolvin/dotfiles/commit/b03bd006107f9fbcbfe82b3fc3443899c7805973))
+
 # [1.2.0](https://github.com/kolvin/dotfiles/compare/v1.1.1...v1.2.0) (2022-10-12)
 
 
