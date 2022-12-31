@@ -7,20 +7,37 @@ Host *
   IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 {{ end }}
 
-## Home cluster
-Host pi-zero
-    HostName 10.19.1.90
+# Pleiades cluster
+Host pleione
+    HostName pleione.local
     User pi
     Port 22
 
-Host kube-master
-    HostName 10.19.1.147
+Host atlas
+    HostName atlas.local
+    User pi
+    Port 22
+
+Host alcyone
+    HostName alcyone.local
+    User pi
+    Port 22
+
+Host merope
+    HostName merope.local
     User pi
     Port 22
 
 # Personal GitHub
-Host personalgit
+Host personalgithub
     HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_personal.pub
+    IdentitiesOnly yes
+
+# Personal Gitlab
+Host personalgitlab
+    HostName gitlab.com
     User git
     IdentityFile ~/.ssh/id_personal.pub
     IdentitiesOnly yes
