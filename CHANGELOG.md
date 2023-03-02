@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/kolvin/dotfiles/compare/v1.2.1...v1.2.2) (2023-03-02)
+
+
+### Bug Fixes
+
+* **zsh:** load gopath in zsh ([69933c9](https://github.com/kolvin/dotfiles/commit/69933c955028e843fb6026742b2e7f03f7e66cfc))
+
 ## [1.2.1](https://github.com/kolvin/dotfiles/compare/v1.2.0...v1.2.1) (2022-10-21)
 
 
