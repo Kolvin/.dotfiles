@@ -52,7 +52,6 @@ tag_symbol = "🏷 "
 [kubernetes]
 disabled       = false
 format         = '[[➜](bold white) $context\($namespace\)](bold cyan) '
-detect_folders = ["k8s"]
 
 [helm]
 disabled = false
