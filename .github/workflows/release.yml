@@ -12,4 +12,3 @@ jobs:
       BOT_GPG_PRIVATE_KEY: ${{ secrets.BOT_GPG_PRIVATE_KEY }}
       BOT_GPG_PASSPHRASE: ${{ secrets.BOT_GPG_PASSPHRASE }}
       DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-

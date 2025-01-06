@@ -1,3 +1,31 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+## Contents
+
+  - [1.2.2 (2023-03-02)](#122-2023-03-02)
+    - [Bug Fixes](#bug-fixes)
+  - [1.2.1 (2022-10-21)](#121-2022-10-21)
+    - [Bug Fixes](#bug-fixes-1)
+- [1.2.0 (2022-10-12)](#120-2022-10-12)
+    - [Features](#features)
+  - [1.1.1 (2022-10-11)](#111-2022-10-11)
+    - [Bug Fixes](#bug-fixes-2)
+- [1.1.0 (2022-09-16)](#110-2022-09-16)
+    - [Features](#features-1)
+  - [1.0.4 (2022-09-07)](#104-2022-09-07)
+    - [Bug Fixes](#bug-fixes-3)
+  - [1.0.3 (2022-08-29)](#103-2022-08-29)
+    - [Bug Fixes](#bug-fixes-4)
+  - [1.0.2 (2022-08-27)](#102-2022-08-27)
+    - [Bug Fixes](#bug-fixes-5)
+  - [1.0.1 (2022-08-27)](#101-2022-08-27)
+    - [Bug Fixes](#bug-fixes-6)
+- [1.0.0 (2022-08-27)](#100-2022-08-27)
+    - [Bug Fixes](#bug-fixes-7)
+    - [Features](#features-2)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## [1.2.2](https://github.com/kolvin/dotfiles/compare/v1.2.1...v1.2.2) (2023-03-02)
 
 

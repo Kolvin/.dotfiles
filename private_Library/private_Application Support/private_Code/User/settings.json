@@ -8,5 +8,12 @@
     "files.exclude": {
        "**/.git": false
     },
-    "workbench.colorTheme": "Tailwind Moon"
+    "workbench.colorTheme": "Tailwind Moon",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    }
 }
